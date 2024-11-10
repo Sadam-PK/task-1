@@ -7,14 +7,14 @@ import logo from "../assets/logo.svg";
 
 const Login = () => {
   return (
-    <div className="flex flex-row w-full h-auto">
-      {/* form section ---- left div */}
+    <div className="flex sm:flex-row w-full h-auto flex-col-reverse">
+      {/* form section ---- div */}
       <div
         className="flex flex-col w-full mx-auto py-5
          justify-around items-center gap-32"
       >
-        <div className="flex flex-col w-[50%] mx-auto ">
-          <a href="#" className="text-gray-400">
+        <div className="flex flex-col w-[50%] mx-auto text-[14px]">
+          <a href="#" className="text-gray-400 sm:block hidden">
             <FontAwesomeIcon icon={faAngleLeft} className="text-gray-400" />{" "}
             Back
           </a>
@@ -30,11 +30,11 @@ const Login = () => {
             <span className="px-2 py-4">or</span>
             <div className="flex-1 bg-gray-300 h-[1px]" />
           </div>
-          <label htmlFor="" className="pb-2">
+          <label htmlFor="" className="pb-2 text-[14px]">
             Email<span className="text-red-500">*</span>{" "}
           </label>
           <CustomInput placeholder="mail@simmmple.com" />
-          <label htmlFor="" className="pt-4 pb-2">
+          <label htmlFor="" className="pt-4 pb-2 text-[14px]">
             Password<span className="text-red-500">*</span>{" "}
           </label>
           <CustomInput
@@ -42,8 +42,8 @@ const Login = () => {
             icon={<FontAwesomeIcon icon={faEye} />}
           />
 
-          <div className="flex flex-row py-6 gap-10">
-            <label htmlFor="" className="">
+          <div className="flex flex-row py-6 gap-10 text-sm">
+            <label htmlFor="" className="text-[14px]">
               <input type="checkbox" className="mr-3" />
               Keep me logged in
             </label>
@@ -52,12 +52,12 @@ const Login = () => {
             </a>
           </div>
           <button
-            className="bg-red-500 w-[24vw] h-[6vh] text-white rounded-xl font-bold
+            className="bg-red-500 w-full sm:w-[24vw] h-[6vh] text-white rounded-xl font-bold
           hover:bg-purple-700 transition delay-50"
           >
             Sign In
           </button>
-          <div className="flex flex-row py-6 gap-1">
+          <div className="flex flex-row py-6 gap-1 text-sm text-[14px]">
             <p>Not registered yet?</p>
             <a href="#" className="text-red-500">
               Create an Account
@@ -65,15 +65,15 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start items-start text-gray-500">
+        <div className="flex flex-col justify-start items-start text-gray-500 text-[14px]">
           <p>@2023 Spark Drive. All rights reserved</p>
         </div>
       </div>
 
-      {/* logo section ---- right div */}
+      {/* logo section ---- div */}
       <div
-        className="flex flex-col w-full justify-between items-center
-           bg-red-600 py-5 mx-auto"
+        className="flex sm:flex-col w-full justify-between items-center
+           bg-red-600 py-5 mx-auto flex-col-reverse h-screen sm:h-auto"
         style={{
           borderBottomLeftRadius: "110px",
         }}
@@ -88,9 +88,10 @@ const Login = () => {
             <img src={logo} className="w-[360px] h-[80px]" />
           </div>
           <div className="h-20" />
+
           <div
-            className="text-center w-[28vw] h-[16vh] flex flex-col justify-center
-            items-center rounded-3xl ml-10"
+            className="text-center sm:w-[28vw] sm:h-[16vh] flex flex-col justify-center
+            items-center rounded-3xl sm:ml-10 w-full py-2"
             style={{ border: "2px solid rgba(255, 255, 255, 0.2)" }}
           >
             <p className="text-white font-light">
@@ -100,12 +101,18 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="flex flex-row text-white">
-          <ul className="flex flex-row gap-5">
-            <li>Licence</li>
-            <li>Terms of Use</li>
-            <li>Blog</li>
-          </ul>
+        <div className="flex flex-row justify-between text-white text-[14px] 
+        w-full sm:w-auto px-10">
+          <a href="#" className="text-white sm:hidden block">
+            <FontAwesomeIcon icon={faAngleLeft} className="text-white" /> Back
+          </a>
+          <div>
+            <ul className="flex flex-row gap-5">
+              <li>Licence</li>
+              <li>Terms of Use</li>
+              <li>Blog</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
