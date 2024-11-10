@@ -8,7 +8,7 @@ import logo from "../assets/logo.svg";
 const Login = () => {
   return (
     <div className="flex flex-row w-full h-auto">
-      {/* left div */}
+      {/* form section ---- left div */}
       <div
         className="flex flex-col w-full mx-auto py-5
          justify-around items-center gap-32"
@@ -37,8 +37,11 @@ const Login = () => {
           <label htmlFor="" className="pt-4 pb-2">
             Password<span className="text-red-500">*</span>{" "}
           </label>
-          <CustomInput placeholder="Min. 8 characters" />
-          {/* &&&&&&&& check gap or justify &&&&&&& */}
+          <CustomInput
+            placeholder="Min. 8 characters"
+            icon={<FontAwesomeIcon icon={faEye} />}
+          />
+
           <div className="flex flex-row py-6 gap-10">
             <label htmlFor="" className="">
               <input type="checkbox" className="mr-3" />
@@ -48,7 +51,10 @@ const Login = () => {
               Forget password?
             </a>
           </div>
-          <button className="bg-red-500 w-[24vw] h-[6vh] text-white rounded-xl font-bold">
+          <button
+            className="bg-red-500 w-[24vw] h-[6vh] text-white rounded-xl font-bold
+          hover:bg-purple-700 transition delay-50"
+          >
             Sign In
           </button>
           <div className="flex flex-row py-6 gap-1">
@@ -64,10 +70,10 @@ const Login = () => {
         </div>
       </div>
 
-      {/* right div */}
+      {/* logo section ---- right div */}
       <div
         className="flex flex-col w-full justify-between items-center
-           bg-red-500 py-5 mx-auto"
+           bg-red-600 py-5 mx-auto"
         style={{
           borderBottomLeftRadius: "110px",
         }}
@@ -97,7 +103,7 @@ const Login = () => {
         <div className="flex flex-row text-white">
           <ul className="flex flex-row gap-5">
             <li>Licence</li>
-            <li>Terms of use</li>
+            <li>Terms of Use</li>
             <li>Blog</li>
           </ul>
         </div>
